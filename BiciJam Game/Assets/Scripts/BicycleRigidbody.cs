@@ -9,7 +9,7 @@ public class BicycleRigidbody : MonoBehaviour
     public int velocidadAlMoverse;
     Vector3 direccionDeMovimiento;
 
-    private float rotacion = 0.0f;
+    float rotacion = 0.0f;
 
     void Start()
     {
