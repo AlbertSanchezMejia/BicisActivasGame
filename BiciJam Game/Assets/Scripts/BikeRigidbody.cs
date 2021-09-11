@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BicycleRigidbody : MonoBehaviour
+public class BikeRigidbody : MonoBehaviour
 {
     Rigidbody rigidBody;
 
@@ -25,14 +25,13 @@ public class BicycleRigidbody : MonoBehaviour
     void Movement()
     {
         float zMovement = Input.GetAxis("Vertical") * 10;
-        direccionDeMovimiento = new Vector3(0, 0, zMovement);
 
-        rigidBody.AddRelativeForce(direccionDeMovimiento * velocidadAlMoverse * Time.deltaTime);
+        rigidBody.velocity = (transform.forward * zMovement * velocidadAlMoverse * Time.deltaTime);
     }
 
     void Rotation()
     {
-        rotacion += Input.GetAxis("Horizontal") * 5;
+        rotacion += Input.GetAxis("Horizontal");
 
         transform.eulerAngles = new Vector3(0.0f, rotacion, 0.0f);
     }
