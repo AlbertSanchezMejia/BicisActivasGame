@@ -9,7 +9,7 @@ public class BicycleCollisions : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Meta"))
         {
-            victoria.SetActive(true);
+            Debug.Log("Working", gameObject);
         }
     }
 }
